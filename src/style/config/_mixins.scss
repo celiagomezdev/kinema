@@ -1,0 +1,24 @@
+@mixin dimension($width, $height: $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin marginHorizontal($left, $right: $left) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin marginVertical($top, $bottom: $top) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin paddingHorizontal($left, $right: $left) {
+  padding-left: $left;
+  padding-right: $right;
+}
+
+@mixin paddingVertical($top, $bottom: $top) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
