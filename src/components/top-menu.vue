@@ -1,10 +1,11 @@
 <template lang="pug">
-  div(class="top-menu") "Hola"
+  div(class="top-menu")
+    h1 Kinema
 </template>
 
 <script>
 export default {
-  name: "TopMenu",
+  name: 'TopMenu'
 }
 </script>
 
