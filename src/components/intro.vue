@@ -1,8 +1,8 @@
 <template lang="pug">
   div(class="intro")
     h1 {{ msg }}
-    p 
-      | Enjoy the seventh art. 
+    p
+      | Enjoy the seventh art.
 </template>
 
 <script>
@@ -11,7 +11,7 @@ export default {
   props: {
     msg: String
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
