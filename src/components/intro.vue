@@ -1,8 +1,7 @@
 <template lang="pug">
   div(class="intro")
-    h1 {{ msg }}
     p
-      | Enjoy the seventh art.
+      | {{ msg }}
 </template>
 
 <script>

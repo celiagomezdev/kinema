@@ -1,6 +1,7 @@
 <template lang="pug">
   div(class="home")
-    Intro(msg="Welcome to Kinema 📽")
+    TopMenu
+    Intro(msg="Enjoy the seventh art.")
 </template>
 
 <script>
