@@ -1,6 +1,6 @@
 <template lang="pug">
   div(class="about")
-    h1 Who are we?
+    h2 About us
 
     p Kinema is an independent cinema based in Neukölln. We are very small (only one room, of around 50 seats), and we have a little cafe-bar (non-smoking, of course). We display not so recent movies, but certainly good. You can find here Kusturica, Wong Kar Wai or Spike Jonze film series.
 
@@ -13,7 +13,11 @@
 @import '../style/index.scss';
 
 .about {
-  padding: 20px 10px;
+  padding: 20px 20px;
+}
+
+h2, p {
+  padding: 10px;
 }
 
 </style>

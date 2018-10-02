@@ -10,10 +10,10 @@
       div(class="about")
         router-link(to="/contact") Contact
     div(class='user')
-      div(class="login")
-        router-link(to="/login") Log in
-      div(class="signup")
-        router-link(to="/signup") Sign up
+        router-link(to="/user")
+          //- .svg
+          include ../assets/user.svg
+          //- use(xlink:href="../assets/user.sg"v)
 </template>
 
 <script>
@@ -40,26 +40,41 @@ export default {
   text-decoration: none;
 }
 
-.top-menu-wrapper a:active {
-  color: $greyGreen;
-}
-
 .top-menu-wrapper a.router-link-exact-active {
   color: $greyGreen;
 }
 
 .logo {
   font-family: 'Capriola', sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   color: $lightGreen;
 }
 
 .nav-menu {
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 99;
+}
 
+.user a {
+  width: 25px;
+  height: 25px;
+}
+
+.user svg {
+  width: 25px;
+  height: 25px;
+}
+
+.user a.router-link-exact-active svg {
+  fill: $greyGreen;
 }
 
 </style>
