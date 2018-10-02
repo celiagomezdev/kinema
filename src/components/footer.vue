@@ -29,7 +29,7 @@ export default {
   padding: 15px 20px;
   background-color: $bgBodyDarkLighter;
   display: grid;
-  grid-template-columns: 6fr 1fr;
+  grid-template-columns: 4fr 1fr;
 }
 
 .footer-wrapper a {

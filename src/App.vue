@@ -3,9 +3,9 @@
     div(class="top-menu")
       TopMenu
     div(class="main")
+      router-view
     div(class="footer")
       Footer
-    router-view
 </template>
 
 <script>
@@ -40,8 +40,9 @@ export default {
 body {
   background-color: $bgBodyDark;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "top-menu", "main", "footer";
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "top-menu", "main", "footer"
 }
 
 .top-menu {
@@ -50,6 +51,7 @@ body {
 
 .main {
   grid-area: main;
+  height: 600px;
 }
 
 .footer {
