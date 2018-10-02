@@ -1,12 +1,20 @@
-<template>
-  <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> -->
-    <!-- </div> -->
-    <router-view/>
-  </div>
+<template lang="pug">
+  div(id="app")
+    div(id='top-menu')
+      TopMenu
+    router-view
 </template>
+
+<script>
+import TopMenu from '@/components/top-menu.vue'
+
+export default {
+  name: 'App',
+  components: {
+    TopMenu
+  }
+}
+</script>
 
 <style lang="scss">
 @import './style/index';
@@ -24,10 +32,11 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
-  color: #685fe0;
+  color: $greyGreen;
 }
 
 body {

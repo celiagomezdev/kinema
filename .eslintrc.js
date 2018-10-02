@@ -28,6 +28,7 @@ module.exports = {
     'import/no-named-as-default': 'off',
     // don't require .vue extension when importing
     'import/extensions': 'off',
+    'max-len': 'off',
     'vue/require-default-prop': 'off',
     // disallow reassignment of function parameters
     // disallow parameter object manipulation except for specific exclusions

@@ -1,9 +1,14 @@
 <template lang="pug">
   div(class="top-menu-container")
-    div(class="top-menu")
-      div(class="logo") kinema
-      div(class="login") Log in
-      div(class="singup") Sing up
+    div(class="top-menu" id="nav")
+      div(class="logo")
+        router-link(to="/") kinema
+      div(class="about")
+        router-link(to="/about") About
+      div(class="login")
+        router-link(to="/login") Log in
+      div(class="signup")
+        router-link(to="/signup") Sign up
 </template>
 
 <script>
