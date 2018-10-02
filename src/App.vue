@@ -1,16 +1,22 @@
 <template lang="pug">
   div(id="app")
-    TopMenu
+    div(class="top-menu")
+      TopMenu
+    div(class="main")
+    div(class="footer")
+      Footer
     router-view
 </template>
 
 <script>
 import TopMenu from '@/components/top-menu.vue'
+import Footer from '@/components/footer.vue'
 
 export default {
   name: 'App',
   components: {
-    TopMenu
+    TopMenu,
+    Footer
   }
 }
 </script>
@@ -22,16 +28,32 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $mainFontColor;
-}
-
-body {
-  background-color: $bgBodyDark
+  min-height: 100%;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: $bgBodyDark;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "top-menu", "main", "footer"
+}
+
+.top-menu {
+  grid-area: top-menu;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
 }
 
 </style>

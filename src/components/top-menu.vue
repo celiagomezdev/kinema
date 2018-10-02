@@ -2,18 +2,9 @@
   div(class="top-menu-wrapper")
     div(class="logo")
       router-link(to="/") kinema
-    div(class="nav-menu" id="nav")
-      div(class="about")
-        router-link(to="/about") About
-      div(class="about")
-        router-link(to="/location") Location
-      div(class="about")
-        router-link(to="/contact") Contact
     div(class='user')
-        router-link(to="/user")
-          //- .svg
-          include ../assets/user.svg
-          //- use(xlink:href="../assets/user.sg"v)
+      router-link(to="/user")
+        include ../assets/user.svg
 </template>
 
 <script>
@@ -32,7 +23,7 @@ export default {
   background-color: $bgBodyDarkLighter;
   font-weight: bold;
   display: grid;
-  grid-template-columns: 2fr 6fr 2fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .top-menu-wrapper a {
@@ -60,7 +51,6 @@ export default {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  z-index: 99;
 }
 
 .user a {
