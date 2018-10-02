@@ -1,7 +1,6 @@
 <template lang="pug">
   div(id="app")
-    div(id='top-menu')
-      TopMenu
+    TopMenu
     router-view
 </template>
 
@@ -22,21 +21,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: $mainFontColor;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  text-decoration: none;
-}
-
-#nav a.router-link-exact-active {
-  color: $greyGreen;
 }
 
 body {
