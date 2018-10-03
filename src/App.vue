@@ -48,6 +48,14 @@ body {
     "top-menu"
     "main"
     "footer";
+
+  // @media (min-width: 500px) {
+  //   grid-template-columns: 1fr auto 1fr;
+  //   grid-template-areas:
+  //     "top-menu" "top-menu" "top-menu"
+  //     "main" "main" "main"
+  //     "footer" "footer" "footer";
+  // }
 }
 
 .top-menu {
