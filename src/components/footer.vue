@@ -9,9 +9,11 @@
         router-link(to="/contact") Contact
     div(class='social')
       div(class="facebook")
-        router-link(to="/fb") facebook
+        router-link(to="/fb")
+          include ../assets/facebook.svg
       div(class="instagram")
-        router-link(to="/ig") instagram
+        router-link(to="/ig")
+          include ../assets/instagram.svg
 </template>
 
 <script>
@@ -22,14 +24,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@import '../style/index.scss';
+@import "../style/index.scss";
 
 .footer-wrapper {
   font-size: 14px;
   padding: 15px 20px;
   background-color: $bgBodyDarkLighter;
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 1fr 50px;
 }
 
 .footer-wrapper a {
@@ -42,24 +44,23 @@ export default {
 }
 
 .social {
-  font-weight: bold;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .social a {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 
 .social svg {
-  width: 25px;
-  height: 25px;
+  fill: $mainFontColor;
+  width: 20px;
+  height: 20px;
 }
 
-.user a.router-link-exact-active svg {
+.social a.router-link-exact-active svg {
   fill: $greyGreen;
 }
-
 </style>
