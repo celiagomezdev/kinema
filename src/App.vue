@@ -22,14 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import './style/index';
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: $mainFontColor;
-  min-height: 100%;
-}
+@import "./style/index";
 
 * {
   margin: 0;
@@ -37,12 +30,24 @@ export default {
   box-sizing: border-box;
 }
 
+html,
 body {
   background-color: $bgBodyDark;
+}
+
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $mainFontColor;
+  height: -webkit-fill-available;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "top-menu", "main", "footer";
   grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "top-menu"
+    "main"
+    "footer";
 }
 
 .top-menu {
@@ -51,11 +56,13 @@ body {
 
 .main {
   grid-area: main;
+  //to fix: should be auto
   height: 600px;
+  min-height: 400px;
 }
 
 .footer {
+  //to fix: should be sticky
   grid-area: footer;
 }
-
 </style>
