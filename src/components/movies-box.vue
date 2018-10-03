@@ -1,6 +1,6 @@
 <template lang="pug">
   div(class="movies-wrapper")
-    router-link(to="/booking")
+    router-link(to="/movie")
       div(class="movie-item")
     div(class="movie-item")
     div(class="movie-item")
