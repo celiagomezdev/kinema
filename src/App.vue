@@ -57,8 +57,7 @@ body {
 .main {
   grid-area: main;
   //to fix: should be auto
-  height: 600px;
-  min-height: 400px;
+  height: auto;
 }
 
 .footer {
