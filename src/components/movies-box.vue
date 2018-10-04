@@ -1,10 +1,12 @@
-
-
 <script>
 import Movies from '../movies.json'
 
+import serverBus from '../main.js'
+
 export default {
   name: 'MoviesBox',
+  //eslint-disable-next-line
+  props: ['selectedMovie'],
   data() {
     return {
       featuredMovies: Movies.movies.slice(0, 30),
@@ -14,16 +16,20 @@ export default {
   methods: {
     getPosterImageUrl(index) {
       return this.featuredMovies[index].posterurl
+    },
+    selectMovie(index) {
+      console.log('selectedMovie', this.selectedMovie)
+      this.selectedMovie = this.featuredMovies[index]
+      serverBus.$emit('selectMovie', this.selectedMovie)
     }
   }
 }
-
 </script>
 
 <template lang="pug">
   div(class="movies-wrapper")
     router-link(to="#" v-for="index in choosenMoviesIndex")
-      div(class="movie-item")
+      div(class="movie-item" @click="selectMovie(index)")
         img(:src="getPosterImageUrl(index)")
 </template>
 

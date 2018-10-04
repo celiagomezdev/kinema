@@ -1,12 +1,3 @@
-<template lang="pug">
-  div(class="home")
-    div(class="left")
-    div(class="center")
-      MoviesBox
-      Schedules
-    div(class="right")
-</template>
-
 <script>
 // @ is an alias to /src
 import MoviesBox from '@/components/movies-box.vue'
@@ -20,6 +11,15 @@ export default {
   }
 }
 </script>
+
+<template lang="pug">
+  div(class="home")
+    div(class="left")
+    div(class="center")
+      MoviesBox
+      Schedules
+    div(class="right")
+</template>
 
 <style lang="scss" scoped>
 @import "../style/index.scss";
