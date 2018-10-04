@@ -1,19 +1,31 @@
-<template lang="pug">
-  div(class="movies-wrapper")
-    router-link(to="/movie")
-      div(class="movie-item")
-    div(class="movie-item")
-    div(class="movie-item")
-    div(class="movie-item")
-    div(class="movie-item")
-    div(class="movie-item")
-</template>
+
 
 <script>
+import Movies from '../movies.json'
+
 export default {
-  name: 'MoviesBox'
+  name: 'MoviesBox',
+  data() {
+    return {
+      featuredMovies: Movies.movies.slice(0, 30),
+      choosenMoviesIndex: [27, 2, 6, 8, 15, 19]
+    }
+  },
+  methods: {
+    getPosterImageUrl(index) {
+      return this.featuredMovies[index].posterurl
+    }
+  }
 }
+
 </script>
+
+<template lang="pug">
+  div(class="movies-wrapper")
+    router-link(to="#" v-for="index in choosenMoviesIndex")
+      div(class="movie-item")
+        img(:src="getPosterImageUrl(index)")
+</template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
@@ -21,7 +33,7 @@ export default {
 
 .movies-wrapper {
   padding: 15px;
-  background-color: $bgBodyLight;
+  background-color: white;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, 1fr);
@@ -35,10 +47,20 @@ export default {
 }
 
 .movie-item {
-  background-color: $pinkLavender;
   min-width: 100px;
   width: 150px;
-  height: 200px;
+  height: 220px;
   min-height: 150px;
+  text-align: center;
 }
+
+.movie-item img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  margin: auto;
+}
+
+
 </style>

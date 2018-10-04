@@ -56,7 +56,7 @@ body {
 
 .main {
   grid-area: main;
-  min-height: 75vh;
+  min-height: 100vh;
   height: auto;
 }
 
