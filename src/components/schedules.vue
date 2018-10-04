@@ -1,19 +1,13 @@
 <script>
-import serverBus from '../main.js'
+import { serverBus } from '../main.js'
 
 export default {
   name: 'Schedules',
-  // props: {
-  //   selectedMovie: {
-  //     type: Object,
-  //     required: true
-  //   }
-  // },
   data() {
     return {
       weekDays: ['Thursday', 'Friday', 'Saturday', 'Sunday'],
       timeTable: ['18:45', '21:00'],
-      selectedMovie: {}
+      selectedMovie: undefined
     }
   },
   created() {
@@ -25,9 +19,10 @@ export default {
 </script>
 
 <template lang="pug">
-  div(class="schedules-wrapper")
+  div(class="schedules-wrapper" v-if="this.selectedMovie")
     div(class="movie-title")
-      h2 {{ this.selectedMovie.originalTitle }}
+      h2(v-if="this.selectedMovie.originalTitle") {{ this.selectedMovie.originalTitle }}
+      h2(v-else) {{ this.selectedMovie.title }}
     div(class="week-days")
       div(class="week-day" v-for="day in weekDays") {{ day }}
         div(class="time" v-for="time in timeTable") {{ time }}

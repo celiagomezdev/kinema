@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 //eslint-disable-next-line
-// export const serverBus = new Vue()
+export const serverBus = new Vue()
 
 Vue.config.productionTip = false
 

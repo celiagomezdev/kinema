@@ -1,16 +1,15 @@
 <script>
 import Movies from '../movies.json'
 
-import serverBus from '../main.js'
+import { serverBus } from '../main.js'
 
 export default {
   name: 'MoviesBox',
-  //eslint-disable-next-line
-  props: ['selectedMovie'],
   data() {
     return {
       featuredMovies: Movies.movies.slice(0, 30),
-      choosenMoviesIndex: [27, 2, 6, 8, 15, 19]
+      choosenMoviesIndex: [27, 2, 6, 8, 15, 19],
+      selectedMovie: {}
     }
   },
   methods: {
@@ -18,7 +17,6 @@ export default {
       return this.featuredMovies[index].posterurl
     },
     selectMovie(index) {
-      console.log('selectedMovie', this.selectedMovie)
       this.selectedMovie = this.featuredMovies[index]
       serverBus.$emit('selectMovie', this.selectedMovie)
     }
