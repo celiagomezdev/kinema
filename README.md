@@ -1,5 +1,14 @@
 # kinema 🎥
 
+## WIP
+> ***Current status***:
+> - Playing with/Learning about `CSS Grid` and `Vue.js` while creating components -- getting to understand state logics.
+
+> ***TODO***:
+> - Create booking tickets logic and components.
+> - Make the whole app responsive, improve design.
+
+
 ## Project setup
 
 ```
