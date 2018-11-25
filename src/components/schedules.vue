@@ -30,7 +30,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@import "../style/index.scss";
+@import "@/assets/style/main.scss";
 
 .schedules-wrapper {
   padding: 15px;

@@ -1,0 +1,227 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Bungee+Shade');
+
+// Colors
+:root {
+  --white: #fff;
+  --soft-white: #fffeff;
+  --gray: #ccc;
+  --dark-gray: #999;
+  --light-gray: #f5f7fa;
+  --blue: #3168ea;
+  --pink: #f469f2;
+  --yellow: #fcff6d;
+  --cta-color: var(--blue);
+  --text-color: #333;
+  --text-color-alt: var(--white);
+  --error: #ff5e5b;
+  --warning: #ff924f;
+}
+
+body {
+  color: var(--text-color);
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 18px;
+}
+
+.logo {
+  font-family: 'Bungee Shade', cursive;
+  color: var(--pink);
+}
+
+a {
+  color: var(--cta-color);
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.cta {
+  text-transform: uppercase;
+}
+
+p + a.cta {
+  margin-top: 15px;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.55em;
+  font-weight: 700;
+  line-height: 1.26;
+  margin: 0 auto;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.77em;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.sub {
+  font-size: 1.33em;
+  line-height: 1.333;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.5;
+  margin: 0.5em 0;
+}
+
+h1 + .sub {
+  margin-top: 1.22em;
+  max-width: 80%;
+  text-align: center;
+}
+
+h2 + .sub,
+h3 + p,
+h3 + .sub {
+  margin-top: 0.6em;
+}
+
+h2 + p {
+  line-height: 1.6;
+  margin-top: 0.25em;
+}
+
+h3 + .sub {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.sub + .btn,
+p + a.ct,
+.sub + a.cta {
+  margin-top: 5.3em;
+}
+
+.small-text {
+  font-size: 0.77em;
+  line-height: 1.7;
+}
+
+.fine-print {
+  font-size: 0.6667em;
+  line-height: 1.5;
+}
+
+.alternate {
+  h1 {
+    color: var(--white);
+  }
+
+  h2 {
+    color: var(--white);
+  }
+
+  h3 {
+    color: var(--white);
+  }
+
+  p {
+    color: var(--white);
+  }
+
+  .small-text {
+    color: var(--white);
+  }
+
+  .fine-print {
+    color: var(--white);
+  }
+}
+
+@include tablet {
+  body {
+    font-size: 16px;
+  }
+
+  .sub + .btn,
+  p + a.cta,
+  .sub + a.cta {
+    margin-top: 3em;
+  }
+}
+
+@include mobile {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  a.cta {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
+  .btn {
+    font-size: 0.9em;
+    line-height: 2;
+    padding: 0 2em;
+  }
+
+  .sub {
+    font-size: 1.285em;
+    line-height: 1.33;
+    width: 100%;
+  }
+
+  h2 + .sub,
+  h3 + p,
+  h3 + .sub {
+    margin-top: 0.6em;
+  }
+
+  h3 + .sub {
+    font-size: 1em;
+    line-height: 1.75;
+  }
+
+  .sub + .btn,
+  p + a.cta,
+  .sub + a.cta {
+    margin-top: 2em;
+  }
+
+  h1 {
+    font-size: 3.28em;
+    line-height: 1.26;
+  }
+
+  h2 {
+    font-size: 2.28em;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 1.71em;
+    line-height: 1.33;
+  }
+
+  .small-text {
+    font-size: 0.85em;
+    line-height: 1.5;
+  }
+
+  h3 + p {
+    margin-top: 0.6em;
+  }
+
+  p + a.cta {
+    margin-top: 2em;
+  }
+}

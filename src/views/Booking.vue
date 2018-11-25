@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../style/index.scss";
+@import '@/assets/style/main.scss';
 
 .booking {
   padding: 20px 0;

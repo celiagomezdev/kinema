@@ -25,15 +25,17 @@ export default {
 </script>
 
 <template lang="pug">
-  div(class="movies-wrapper")
-    router-link(to="#" v-for="index in choosenMoviesIndex")
-      div(class="movie-item" @click="selectMovie(index)")
-        img(:src="getPosterImageUrl(index)")
+  section#movies-box
+    .content
+      .movies-wrapper
+        router-link(to="#" v-for="index in choosenMoviesIndex")
+          div.movie-item(@click="selectMovie(index)")
+            img(:src="getPosterImageUrl(index)")
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@import "../style/index.scss";
+@import '@/assets/style/main.scss';
 
 .movies-wrapper {
   padding: 15px;
@@ -65,6 +67,4 @@ export default {
   overflow: hidden;
   margin: auto;
 }
-
-
 </style>

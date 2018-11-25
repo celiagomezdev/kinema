@@ -4,7 +4,7 @@
       router-link(to="/") kinema
     div(class='user')
       router-link(to="/user")
-        include ../assets/user.svg
+        include @/assets/img/user.svg
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@import '../style/index.scss';
+@import '@/assets/style/main.scss';
 @import url('https://fonts.googleapis.com/css?family=Capriola');
 
 .top-menu-wrapper {
@@ -66,5 +66,4 @@ export default {
 .user a.router-link-exact-active svg {
   fill: $greyGreen;
 }
-
 </style>

@@ -13,21 +13,10 @@ export default {
 </script>
 
 <template lang="pug">
-  div(class="home")
-    div(class="left")
-    div(class="center")
-      MoviesBox
-      Schedules
-    div(class="right")
+  div
+    MoviesBox
+    Schedules
 </template>
 
 <style lang="scss" scoped>
-@import "../style/index.scss";
-
-.home {
-  padding: 20px 0;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-areas: "left center right";
-}
 </style>

@@ -10,14 +10,14 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../style/index.scss';
+@import '@/assets/style/main.scss';
 
 .about {
   padding: 20px 20px;
 }
 
-h2, p {
+h2,
+p {
   padding: 10px;
 }
-
 </style>
