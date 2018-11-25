@@ -1,25 +1,17 @@
-<template lang="pug">
-  div(id="app")
-    div(class="top-menu")
-      TopMenu
-    div(class="main")
-      router-view
-    div(class="footer")
-      Footer
-</template>
-
 <script>
-import TopMenu from '@/components/top-menu.vue'
-import Footer from '@/components/footer.vue'
+// import TopMenu from '@/components/top-menu.vue'
+// import Footer from '@/components/footer.vue'
 
 export default {
-  name: 'App',
-  components: {
-    TopMenu,
-    Footer
-  }
+  name: 'App'
 }
 </script>
+
+<template lang="pug">
+  div.app
+    div.main
+      router-view
+</template>
 
 <style lang='scss'>
 @import '@/assets/style/main.scss';
@@ -32,14 +24,14 @@ export default {
 
 html,
 body {
-  background-color: $bgBodyDark;
+  background-color: var(--white);
 }
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $mainFontColor;
+  color: var(--text-color);
   height: -webkit-fill-available;
   display: grid;
   grid-template-columns: 1fr;

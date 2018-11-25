@@ -8,7 +8,7 @@ export default {
   data() {
     return {
       featuredMovies: Movies.movies.slice(0, 30),
-      choosenMoviesIndex: [27, 2, 6, 8, 15, 19],
+      choosenMoviesIndex: [27, 18, 6, 8, 15, 19],
       selectedMovie: {}
     }
   },
@@ -27,9 +27,10 @@ export default {
 <template lang="pug">
   section#movies-box
     .content
-      .movies-wrapper
-        router-link(to="#" v-for="index in choosenMoviesIndex")
-          div.movie-item(@click="selectMovie(index)")
+      .grid
+        .movies-wrapper
+          .movie-item(v-for="index in choosenMoviesIndex")
+            router-link(to="#" @click="selectMovie(index)")
             img(:src="getPosterImageUrl(index)")
 </template>
 
@@ -38,26 +39,13 @@ export default {
 @import '@/assets/style/main.scss';
 
 .movies-wrapper {
-  padding: 15px;
-  background-color: white;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  justify-content: center;
-
-  @media (min-width: 500px) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: (repeat(2, 1fr));
-  }
+  grid-column: 3/11;
 }
 
 .movie-item {
-  min-width: 100px;
-  width: 150px;
+  grid-column: span 2;
   height: 220px;
   min-height: 150px;
-  text-align: center;
 }
 
 .movie-item img {
