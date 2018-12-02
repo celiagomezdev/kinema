@@ -1,20 +1,21 @@
 <script>
 // @ is an alias to /src
 import MoviesBox from '@/components/movies-box.vue'
-// import Schedules from '@/components/schedules.vue'
+import Hero from '@/components/hero.vue'
 
 export default {
   name: 'Home',
   components: {
+    Hero,
     MoviesBox
-    // Schedules
   }
 }
 </script>
 
 <template lang="pug">
+  div
+    Hero
     MoviesBox
-    //- Schedules
 </template>
 
 <style lang="scss" scoped>
