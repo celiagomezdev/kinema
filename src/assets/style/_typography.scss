@@ -1,5 +1,6 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Bungee+Shade');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 @import 'breakpoints';
 
 // Colors
@@ -21,7 +22,7 @@
 
 body {
   color: var(--text-color);
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: 'Roboto Slab', serif;
   font-size: 18px;
 }
 

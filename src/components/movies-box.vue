@@ -40,7 +40,6 @@ export default {
 .movie-wrapper {
   grid-template-columns: repeat(8, 1fr);
   grid-column: 3 / 11;
-  height: 500px;
 }
 
 .movie-item {
@@ -57,5 +56,25 @@ export default {
 .cover-filter:hover {
   -webkit-filter: opacity(90%);
   filter: opacity(90%);
+}
+
+@include tablet {
+  .movie-wrapper {
+    grid-template-columns: repeat(6, 1fr);
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+
+  .poster {
+    width: auto;
+  }
+}
+
+@include mobile {
+  .movie-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1/-1;
+    justify-items: center;
+  }
 }
 </style>
